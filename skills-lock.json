@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "browser-platformer-weak-llm": {
+      "source": "ingo-eichhorst/berlin42-mAI",
+      "commit": "2a750add479f2820c4abd7c91cfd9706f0b22e0c",
+      "sourceType": "github",
+      "skillPath": ".opencode/skills/browser-platformer-weak-llm/SKILL.md",
+      "computedHash": "96448fb76a301aa38eba78e246c392ede21508f6ba7ac45dd5762ef90cbaada2"
+    }
+  }
+}

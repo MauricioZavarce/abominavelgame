@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1b1110">
+  <title>Abominável — Roguelike de Ação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell" aria-label="Abominável, jogo roguelike de ação">
+    <div id="canvas-wrap">
+      <canvas id="gameCanvas" width="960" height="640" tabindex="0" aria-label="Área do jogo">
+        Seu navegador precisa oferecer suporte ao elemento canvas.
+      </canvas>
+
+      <div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="overlay-title" hidden>
+        <section class="panel">
+          <p class="panel-kicker">ABOMINÁVEL</p>
+          <h1 id="overlay-title">Pausa</h1>
+          <p id="overlay-text"></p>
+          <div class="button-row">
+            <button id="btn-primary" type="button">Continuar</button>
+            <button id="btn-audio" type="button">Áudio</button>
+            <button id="btn-secondary" type="button">Escolher personagem</button>
+          </div>
+          <small>ESC pausa no jogo • nas telas de fim, volta ao menu • O abre as opções de áudio.</small>
+        </section>
+      </div>
+
+      <div id="audio-overlay" class="overlay audio-overlay" role="dialog" aria-modal="true" aria-labelledby="audio-title" hidden>
+        <section class="panel audio-panel">
+          <p class="panel-kicker">CONFIGURAÇÕES</p>
+          <h1 id="audio-title">ÁUDIO</h1>
+          <p>Ligue ou desligue cada canal separadamente. A trilha do chefe é ativada automaticamente na sala dele.</p>
+          <div class="audio-options">
+            <button id="toggle-music" class="audio-toggle" type="button" aria-pressed="true">Música: Ligada</button>
+            <button id="toggle-sfx" class="audio-toggle" type="button" aria-pressed="true">Efeitos: Ligados</button>
+          </div>
+          <div class="button-row audio-close-row">
+            <button id="audio-close" type="button">Voltar</button>
+          </div>
+          <small>Atalhos: M música • N efeitos • O abre/fecha este menu.</small>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <span><kbd>WASD</kbd> mover</span>
+      <span><kbd>IJKL</kbd> atirar</span>
+      <span><kbd>C</kbd> alternar função das setas</span>
+      <span><kbd>Espaço/Q</kbd> bomba</span>
+      <span><kbd>M</kbd> música</span>
+      <span><kbd>N</kbd> efeitos</span>
+      <span><kbd>ESC</kbd> pausa</span>
+      <button id="open-audio" class="footer-audio" type="button"><kbd>O</kbd> áudio</button>
+    </footer>
+  </main>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
